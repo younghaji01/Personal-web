@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="logo.jpg" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Software Development Student</p>
+                <h1>Hello, My name is <span>Mohamed</span><br>and I'm a student at FullStack Aacademy</h1>
+            </div>
+        </div>
+
+    </div>
+    <!---about--- -->
+    <div id="about">
+        <div class="ccontainer">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="pic1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm a new student with FullStack Academy who started his codiing jurney. I dont much about coding but im hoping to learn during my time with this program.I'm a pretty relaxed person who love's to eat and have fun with friends and family. I love to go to the gym and watch Anime, and i also love cats.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li>Skilled at interacting with customers of all diverse socioeconomic backgrounds</li>
+                            <li>Fluent in Somali as well as English</li>
+                            <li>Profiecent in Microsoft Office (Word, Excel, PowerPoint, Outlook, Publisher, etc)</li>
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2019 - 2020</span><br>Amazon Delivery Driver</li>
+                            <li><span>2020 - 2021</span><br>Yard Marshal</li>
+                            <li><span>2021 - Current</span><br>Driver Trainer</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2014</span><br>High School Graduate</li>
+                            <li><span>2023 - Current</span><br>Software Developer </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Portfolio-->
+    <div id="protfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="work1.jpg">
+                </div>
+                <div class="work">
+                    <img src="work2.jpg">
+                </div>
+                <div class="work">
+                    <img src="work3.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links")
+        var tabcontents= document.getElementsByClassName("tab-contents")
+         function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+         }
+    </script>
+</body>
+</html>
