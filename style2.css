@@ -1,0 +1,25 @@
+ain {
+    min-height: 100vh;
+    padding: 64px 24px 96px;
+    box-shadow: 0 0 12px -2px black;
+    color: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+main {
+    display: block;
+}
+body {
+    background: rgb(110, 74, 54);
+    max-width: 960px;
+    color: #232323;
+    margin: 0 auto;
+}
+html {
+    font-family: sans-serif;
+    font-size: 16px;
+    background: rgb(93, 146, 187);
+}
